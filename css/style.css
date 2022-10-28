@@ -1,0 +1,265 @@
+.big-display{
+display: flex;
+}
+@media (max-width: 800px){
+	.big-display{display: none;}
+}
+.small-display{
+	display: none;
+}
+@media (max-width: 800px){
+	.small-display{	
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+}
+
+
+.bg{
+	position: absolute;
+	z-index: -4; 
+	height: 100%;
+	width: 100%;	
+	align-items: center;
+	justify-content: center;	
+}
+.bg img{	
+	max-width: 1200px;
+	max-height: 650px;
+}
+
+
+.book{
+	position: absolute;
+	z-index: -2;
+	height: 100%;
+	width: 100%;	
+	align-items: center;
+	justify-content: center;
+	animation-name: animate-grow;
+	-webkit-animation-name: animate-grow;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;	
+}
+@keyframes animate-grow {
+	0% {
+		transform: scale3d(1, 1, 1);
+
+	}
+	50% {
+		transform: scale3d(1.01, 1.01, 1.01) translateX(-2%) translateY(1.5%);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+.book img{	
+	max-width: 1200px;
+	max-height: 650px;
+}
+
+
+.blic{
+	position: absolute;
+	z-index: -1;
+	animation-name: animate-scale;
+	-webkit-animation-name: animate-scale;
+	animation-duration: 6s;              
+	-webkit-animation-duration: 6s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	pointer-events: none;
+}
+@keyframes animate-scale {
+	0% {
+		transform: scale3d(1, 1, 1);
+
+	}
+	50% {
+		transform: scale3d(1.1, 1.1, 1.1) ;
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+@media (max-width: 800px){	
+	.blic img{		
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+}
+
+
+.container{
+	max-width: 800px;
+	margin:0 auto;
+}
+@media (max-width: 1200px){
+	.container{
+		max-width: 800px;
+	}
+}
+
+
+body{
+	height: 100vh;
+	background-image: url(../01.jpg);	
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+main{
+	height: 100vh;
+	margin-left: 3vw;	
+	margin-right: 3vw;	
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content:  center;	
+}
+.main3-p p{
+	width: 40vw;
+}
+@media (max-width: 700px){
+	.main3-p p{
+	width: 250px;}
+}
+.main4-p p{
+	width: 90%;	
+}
+.main4-p img{
+	max-height: 25%;
+	margin: 0 auto;	
+}
+.inputs{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	padding: 0 10vw;
+}
+@media (max-width: 800px){
+	.inputs{
+	max-width: 400px;}
+}
+input{
+	display: inline-block;
+	width: 5vw;
+	height: 5vw;
+	font-size: 2em;
+	padding: 1vw;
+	border-radius: 5px;
+	border-color: transparent;
+	margin: .25vw;
+
+
+
+}
+@media (max-width: 800px){
+	.main4-p p{
+	padding: 0 10vw;}
+}
+h1{
+	font-family: 'Yeseva One', cursive;	
+	font-size: 45px;
+}
+p{
+	margin-top: 60px;
+	width: 20vw;
+	font-size:0.9em;
+}
+@media (max-width: 800px){
+	h1{font-size: 35px;
+	}
+	p{margin-top: 10px;
+	width:300px;
+	font-size:0.8em; }
+	main{		
+		justify-content: flex-start;
+		align-items: center;
+		padding-top: 20vh;
+		
+	}
+}
+
+
+
+
+.copyright{
+position: absolute;
+bottom: 0;
+font-size: 0.9em;
+padding-bottom: 5px;
+}
+@media (max-width: 800px){
+	.copyright{margin: 0 5vw;}
+}
+.web-design-for-you{
+color:white;
+padding-left: 5px;
+}
+.web-design-for-you{	
+font-weight: 700;
+transition: 0.5s ease;
+}
+.web-design-for-you svg{
+width: 12px;
+}
+.web-design-for-you:hover{	
+color:#e8ba65;
+}
+.web-design-for-you:hover svg{	
+animation-name: anim;
+-webkit-animation-name: anim;
+animation-duration: .8s;
+-webkit-animation-duration: .8s;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+@keyframes anim {
+	0% {
+		transform: scale(0.8);
+	}		
+	70% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0.8);		
+	}
+}
+
+.hat, .chan{
+	display: flex;	
+	justify-content: center;
+	position: absolute;
+	z-index: -2;
+	height: 100%;
+	width: 100%;	
+	align-items: center;
+	justify-content: center;
+	animation-name: animate-grow;
+	-webkit-animation-name: animate-grow;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;	
+}
+.hat img, .chan img{
+	margin: 30vh 20vw 30vh 50vw ;
+	height: 60vh;
+	max-height: 400px;	
+}
+@media (max-width: 800px){
+	.hat img, .chan img{margin:45vh auto 10vh;
+		height: 30vh;}
+}
+
+
