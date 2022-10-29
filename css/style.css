@@ -159,9 +159,9 @@ input{
 	border-radius: 5px;
 	border-color: transparent;
 	margin: .25vw;
-
-
-
+}
+@media (max-width: 800px){
+	input{font-size: .8em;}
 }
 @media (max-width: 800px){
 	.main4-p p{
